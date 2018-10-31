@@ -4,7 +4,8 @@ from find_next_move import *
 
 """The user runs this file to play a tic-tac-toe game. Moves are entered
 manually and updated to a GameBoard object. The user can choose to play
-against another player or against the computer."""
+against another player or against the computer.
+@Author: Asad Durrani"""
 
 def move_prompt() -> Move:
     mov = input("Enter your move in the form 'row,column'." + "\n")

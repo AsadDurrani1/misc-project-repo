@@ -13,6 +13,8 @@ def find_next_move(b: GameBoard):
     The opponent's best move is considered as the current player's worst move and is avoided at all costs, given -10 points.
     
     4. return the move with the highest points
+    
+    @Author: Asad Durrani
     """
     if b.is_draw():
         return Move(-1, -1)

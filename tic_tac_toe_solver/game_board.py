@@ -2,7 +2,8 @@ from move import *
 
 """A board for a standard tic-tac-toe game. A GameBoard object has a list of its current
 contents and keeps track of which player's turn it is. Moves are made by the move() method
-which takes in a Move object and updates the current GameBoard's board. """
+which takes in a Move object and updates the current GameBoard's board.
+@Author: Asad Durrani"""
 class GameBoard:
     pieces = {0: " ", 1: "X", -1: "0"}
     players = {1: "X", -1: "O"}

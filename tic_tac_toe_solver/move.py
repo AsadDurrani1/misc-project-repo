@@ -1,5 +1,6 @@
 """Implements a representation of a move in a tic-tac-toe game. A move has a
-row, a column, and a number of points which is by default 0."""
+row, a column, and a number of points which is by default 0.
+@Author: Asad Durrani"""
 class Move:
     def __init__(self, row, column, points = 0):
         self.row = row

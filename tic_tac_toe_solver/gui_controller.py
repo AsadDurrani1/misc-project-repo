@@ -4,7 +4,8 @@ from find_next_move import *
 import time
 import random
 
-"""Implements a tkinter GUI controller to play the Tic-Tac-Toe game."""
+"""Implements a tkinter GUI controller to play the Tic-Tac-Toe game in.
+@Author: Asad Durrani"""
 class GameBoardView:
     def __init__(self):
         self.game_board = GameBoard()
