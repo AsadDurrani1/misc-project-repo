@@ -67,7 +67,7 @@ class GameBoardView:
 
     def move_update_2p(self, event):
         """Updates the current game state and view with respect to a move made in a
-        two-player game."""
+        two-player game. Called by two_players."""
         row = (event.x//100)+1
         column = (event.y//100)+1
         try:
@@ -101,7 +101,7 @@ class GameBoardView:
     def move_update_com(self, event):
         """Updates the current game state and view with respect to a move
         made against the computer player. The computer player will
-        also make its next move."""
+        also make its next move. Called by against_computer"""
         row = (event.x//100)+1
         column = (event.y//100)+1
         try:
@@ -144,7 +144,7 @@ class GameBoardView:
 
     def add_shape(self, row, column):
         """Adds either an X or an O to the current view, depending on whose
-        turn it is."""
+        turn it is. Called by both move_update_com and move_update_2p"""
         if self.game_board.get_current_player() == "X":
             self.canvas.create_line((row-1)*100 + 30, (column-1)*100 + 30,(row-1)*100 + 70, (column-1)*100 + 70, width=4)
             self.canvas.create_line((row-1)*100 + 30, (column-1)*100 + 70,(row-1)*100 + 70, (column-1)*100 + 30, width=4)
