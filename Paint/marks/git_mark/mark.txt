@@ -1,0 +1,6 @@
+Git 
+    G01 [Y] Branches on user stories
+    G02 [N] No/little code commits on master
+    G03 [Y] Merges back to master
+    G04 [N] Git history looks straightforward
+Git 2/4

@@ -1,0 +1,120 @@
+# Fill in, commit and push each day.
+# Group Member: Asad Durrani
+Oct 28, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Oct 29, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Oct 30, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Oct 31, 2018
+	Yesterday :
+	Today     : Started on User Story 6. Added
+	colour-picker sidebar. There's a little bug 
+	that has to do with the previously drawn
+	objects also getting their color changed when
+	a new color is picked.
+
+	Obstacles : Converting java color strings into
+	CSS style to use for the color buttons.
+
+Nov 1, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 2, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 3, 2018
+	Yesterday : fixed some code in the paintpanel, refactored code in 
+		ColourChooserPanel to be more readable
+	Today     : User Story 6, need to implement a fill/outline
+		option.
+
+		Done User Story 6, also made some minor changes to class
+		PaintPanel to fix shape counter. 
+	Obstacles : Code is getting cluttered in PaintModel. Consider making
+		drawRect(g) and drawCircle(g) in the Rect and Circle classes.
+		Also maybe a Mode class so we can easily keep track of 
+		fillStyle, colour, line thickness, etc.
+
+Nov 4, 2018
+	Yesterday : Encountered a substantial bug in the drawing of filled in rectangles. Some shapes take priority over others.
+		Shapes should always be drawn in the order they were originally drawn.
+	Today     : Want to FIX the bug that showed up yesterday by working on Bug 4. Having a single stack that contains all shapes
+		in the model is much more flexible, and will ensure all shapes are drawn in the right order.
+	Obstacles :
+
+Nov 5, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 6, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 7, 2018
+	Yesterday :
+	Today     : Introduced DrawingStrategy interface, implemented by each shape. Worked with mehtaku6 on bug 7.
+			He copied and pasted draw methods from paintpanel into the shape objects so that each object
+			knows how to draw itself. I worked on combining the arraylists in paintmodel into one single
+			list of Shape objects. This gives us bug 4 for free.
+			This fixes the bug of things being drawn in the wrong order.
+	Obstacles : Understanding how commands vs. strategies work, their pros and cons, etc.
+
+Nov 8, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 9, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 10, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+	
+Nov 11, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+	
+Nov 12, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 13, 2018
+	Yesterday : talked to group members about bugs 9 and 10, and how they relate and differ to bugs 7 and 8.
+
+	Today     : Completed bugs 7 and 8, refactored drawing strategy to be drawing command, so that the paint model now invokes
+		    the command built in to each shape to draw itself onto the canvas. Refactored the undo/redo code. Added current
+		    colour display like in microsoft paint. Changed default background to white. Made it so that the shape counter
+		    is drawn after all the shapes and is not covered up.
+
+	Obstacles : Figuring out which parts of the code were redundant in bugs 7 and 8, didn't want to implement a design pattern
+		    that was unnecessary. (implementing command in this way ended up saving 50+ lines of code).
+
+Nov 14, 2018
+	Yesterday :
+	Today     : 
+	Obstacles :
+
+Nov 15, 2018
+	Today: Added javadoc to classes that I worked on. Fixed a tiny bug in ColourChooserPanel for visual effect.

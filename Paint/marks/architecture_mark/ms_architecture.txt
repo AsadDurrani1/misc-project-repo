@@ -1,0 +1,71 @@
+Code Simplicity 
+    S01 [YN] Each squiggle contains all of its points. For example in an ArrayList.
+    S02 [YN] No "if", "switch" in PaintPanel
+    S03 [YN] No String modes or similar in PaintPanel
+    S04 [YN] Naming should be clear, class names should 
+         have Model/Command/Strategy/Factory etc. in their names.
+
+    S05 [YN] Instance variables should be private.
+    S06 [YN] Only ArrayList in PaintModel, Squiggle, PolyLine, possibly for redo stack
+    S07 [YN] GraphicsContext and mouseEvent should not be in same class
+    S08 [YN] No use of static, only in exceptional cases, more likely, use indicates an issue.
+    S09 [YN] No use of instanceof, with the possible exception of architectures with pen commands in the PaintModel and for undo/redo
+    S10 [YN] mouse dragged, should cause redraw of complete PaintModel
+    S11 [YN] Rectangle handling topLeft and bottomRight is simple. No "if" here.
+    S12 [YN] No repeated 
+         if (e.getEventType() == MouseEvent.MOUSE_PRESSED) {
+
+         } else if (e.getEventType() == MouseEvent.MOUSE_DRAGGED) {
+
+         } else if (e.getEventType() == MouseEvent.MOUSE_RELEASED) {
+
+         }
+Code Simplicity /12
+
+Architecture 
+
+    Strategy
+    A01 [YN] No if(mode == ...) checks, for example for mouse events.
+    A02 [YN] Mouse events should only be handled in one place, 
+         code should be at most direct deligation through to strategy.
+         Problem if mouse events are partially handled in PaintPanel
+         and partly handled in Strategy. Example of this is when 
+    A03 [YN] new Circle() should be in strategy, nowhere else, not in Command, not in Circle.
+    A04 [YN] RectangleStrategy drag is simple, not much more than a single call to a rectangle setter or similar.
+    A05 [YN] RectangleStrategy only handles press and drag. No other events are necessary.
+
+    Command
+    A06 [YN] Number of elements in PaintModel array does not increase during drag.
+
+         Symptom is laggy drag. Put a 
+
+         System.out.println("added: "+this.XXXX.size()); 
+
+         inside PaintModel’s add method to see when adding is happening. 
+         May have to make the ArrayList private so that adds 
+         don’t happen outside of this method.
+
+    A07 [YN] Each Command draws a single shape instance.
+         Each command should concern itself with drawing only itself.
+         Not, for example, an array list of other similar commands.
+
+    A08 [YN] PaintPanel.repaint() asks model to draw, or go through 
+         commands and ask each command to draw. Should be simple.
+
+    Factory
+    A09 [YN] Factory creates Strategies
+    A10 [YN] Factory called by ShapeChooserPanel
+
+    Relationship Between Classes
+    A11 [YN] GraphicsContext: Only appears in Commands/Shape, not in Strategy, not in MouseEvents
+    A12 [YN] Strategy is separate from Command/Shape.
+         Command/Shape do not handle mouse events.
+
+Architecture /12
+
+Documentation 
+    D01 [YN] Class Documentation on each interesting class
+    D02 [YN] Method Documentation on each interesting method
+    D03 [YN] Description of how classes are used in Design Patterns
+    D04 [YN] Self documenting method names
+Documentation /4

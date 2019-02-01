@@ -1,0 +1,53 @@
+CodeFunctionality 
+    Misc
+    F01 [YN] i=n No longer appears on screen
+    F02 [YN] z-order respects order objects are created in
+    F03 [YN] After window resize, drag in window displays properly.
+         Bug in original code: Canvas should be tracking mouse events
+         not PaintPanel
+    F04 [YN] Drag responds quickly. Mouse momentarily gets away
+         from shape boundary possibly indicates an issue. 
+         Possibly repeatedly adding shapes to the model 
+         instead of modifying one shape/command in the model.
+
+    Circle
+    F05 [YN] Feedback while dragging circle
+    F06 [YN] Drag circle tracks mouse (mouse stays on boundary)
+
+    Rectangle
+    F07 [YN] Can build rectangle
+    F08 [YN] Drag rectangle tracks mouse (stays on perimeter, when dragging up, left)
+
+    Square
+    F09 [YN] Can build square
+    F10 [YN] Drag square tracks mouse (stays on perimeter, when dragging up, left)
+
+    Squiggle
+    F11 [YN] Can build squiggle
+    F12 [YN] Squiggles are separate
+
+    Color selector
+    F13 [YN] Color chooser
+    F14 [YN] OK Color chooser
+    F15 [YN] Great color chooser
+
+    Fill style selector
+    F16 [YN] Fill style (filled/outlined) present and works
+    F17 [YN] Fill selector clearly indicates current state
+
+    Line thickness selector
+    F18 [YN] Line thickness
+    F19 [YN] Great line thickness UI (ie slider, not just a textbox)
+
+    Drawing Mode
+    F20 [YN] Icons for shape mode
+    F21 [YN] No text for shape mode
+    F22 [YN] Clear indication of which shape mode is selected
+
+    Polyline
+    F23 [YN] Polyline implemented
+
+CodeFunctionality /23
+
+Additional Features /?? -- THESE ARE BONUS MARKS FOR EXTRA FEATURES
+

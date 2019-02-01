@@ -1,0 +1,98 @@
+# Fill in, commit and push each day.
+# Group Member: Kristyn Nicolette Herbert
+Oct 28, 2018
+	Yesterday : N/A
+	Today     : N/A
+	Obstacles : N/A
+
+Oct 29, 2018
+	Yesterday : N/A
+	Today     : Received assignment, read through scrum documents, filled in contact information.
+	Obstacles : None.
+
+Oct 30, 2018
+	Yesterday : Filled in contact information.
+	Today     : Completed User Story 1. 
+	Obstacles : Learning how to push from branch to master for the first time.
+
+Oct 31, 2018
+	Yesterday : Completed User Story 1.
+	Today     : Completed User Story 2 and Bug 6, started User Story 7. Was able to contact other two team members.
+	Obstacles : Understanding graphics and starter code was challenging at first, but became easier.
+
+Nov 1, 2018
+	Yesterday : Completed User Story 2 and Bug 6.
+	Today     : Continued working on User Story 7.
+	Obstacles : Understanding how to implement changes for the panel in the most efficient way.
+
+Nov 2, 2018
+	Yesterday : Continued working on User Story 7.
+	Today     : Researched and understood how to implement new graphics elements, progressed User Story 7.
+	Obstacles : Understanding how to properly create and connect different aspects of graphics for JavaFX in their separate classes.
+
+Nov 3, 2018
+	Yesterday : Continued working on User Story 7.
+	Today     : Completed User Story 7, neatened code in master and worked on scrum documentation.
+	Obstacles : Understanding how the View, Model and Panels work together; understanding how to pass information from the slider 
+				in LineThicknessPanel to PaintPanel since a slider does not have an ActionEvent.
+
+Nov 4, 2018
+	Yesterday : Completed User Story 7 and Sprint 1.
+	Today     : Began User Story 8.
+	Obstacles : Balancing schedule.
+
+Nov 5, 2018
+	Yesterday : Began User Story 8.
+	Today     : Completed User Story 8.
+	Obstacles : N/A
+
+Nov 6, 2018
+	Yesterday : Completed User Story 8.
+	Today     : Began and completed Bug 5, began Bug 11.
+	Obstacles : Had trouble with making the Squiggle visible as it is drawn.
+
+Nov 7, 2018
+	Yesterday : Completed Bug 5, started Bug 11.
+	Today     : Completed Bug 11. Began Bug 10, discussed with partner (sandh211) about Bug 9 and 10 and how they work together.
+	Obstacles :	Properly applying what we've learned about design patterns and understanding how many design patterns can work together.
+
+Nov 8, 2018
+	Yesterday : Completed Bug 11; brainstormed Bug 9 and 10 with partner. 
+	Today     :	Continued to work through Bug 9 and 10 with partner (sandh211); Bug 10 is progressing well.
+	Obstacles : Understanding how to properly implement the Factory and Strategy design patterns in the most efficient way.
+
+Nov 9, 2018
+	Yesterday : Continued Bug 9 and 10.
+	Today     :	Progressed on Bug 10.
+	Obstacles : The shapes are not added to the list of all shapes properly, working on understanding how the classes work together properly.
+
+Nov 10, 2018
+	Yesterday : Progressed on Bug 10.
+	Today     : Completed Bug 10, found bug for Polyline.
+	Obstacles :	Trouble with Polyline feedback and ending Polyline when mode changes.
+	
+Nov 11, 2018
+	Yesterday : Completed Bug 10.
+	Today     : Began Bug 12.
+	Obstacles : Need to change implementation of Polyline.
+	
+Nov 12, 2018
+	Yesterday : Began Bug 12.
+	Today     : Progressed Bug 12.
+	Obstacles : Having trouble creating a new Polyline when the mode changes.
+
+Nov 13, 2018
+	Yesterday : Progressed Bug 12.
+	Today     : Completed Bug 12; received some help during Professor Furkan's office hours and was able to correct implementation of 
+				Strategy Shapes with partner (sandh211). Began Bug 15.
+	Obstacles : Implementation of Strategy Shapes was incorrect and was causing problems with many other bugs; now resolved.
+
+Nov 14, 2018
+	Yesterday : Completed Bug 12 and began Bug 15.
+	Today     : Completed Bug 15 and made some modifications to layout of Paint to clean it up.
+	Obstacles : Had trouble adjusting canvas size as window size changed; now resolved.
+	
+Nov 15, 2018
+	Yesterday : Completed Bug 15 and made some modifications to layout of Paint to clean it up.
+	Today     : Added javadocs and completed Assignment 2.
+	Obstacles : 

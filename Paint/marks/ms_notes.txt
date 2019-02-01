@@ -1,0 +1,218 @@
+This notes summarizes assignment 2 marking preliminary feedback.
+
+----------------------------------------------------------------------------
+Quick start
+----------------------------------------------------------------------------
+For a quick look, take a look at
+group_mark.txt: what the submitted project is worth
+member_scores.txt: how much each member contributed
+member_marks.txt: individual marks based on group_mark adjusted by contribution
+marks_feedback.txt: for sending us marks issues
+
+----------------------------------------------------------------------------
+Manifest
+----------------------------------------------------------------------------
+
+repo_a2_*/Assignment2/marks/
+ 	group_mark.txt: This is the evaluation of the project before
+ 		re-weighting to consider individual contributions. Marks
+ 		here are derived from architecture_mark, git_mark, gui_mark
+ 		and scrum_mark
+
+ 	member_scores.txt: For each member, this is a measure of their
+ 		contribution to the project. It consists of
+ 		1) number of user stories done by this member
+ 		2) total number of user stories counted for this group
+ 		3) percentage of the project worked on by this member
+ 		4) class rank for total amount of work done.
+ 			The students with rank = 1 apparently did the most
+ 			work in the class.
+
+ 		Notes:
+ 		1) Only user stories/bugs moved to the completed section
+ 		of the productBacklog were counted.
+
+ 		2) Only user stories/bugs clearly attached to a single
+ 		student are counted.
+
+ 	member_marks.txt:
+ 		After careful consideration we adopted a mapping which
+ 		takes the group mark and scales it by the amount of work
+ 		each member contributed to the assignment (see
+ 		member_scores.txt field 3). The mapping is the following:
+
+ 		adjusted = mark*(.29734*log(percentWork+1.0,e)+.0070976)+2
+
+		to a maximum of 100%
+
+ 		The total percentWork for the team is 100. This mapping
+ 		takes a percentage of 0 and makes the mark close to 0.
+ 		If percentage=25, then the factor is 1. Above 
+		percentage=25 the factor increases above 1. If percentage
+ 		increases for one member, it decreases for others.
+
+		Additionally, if the total number of user stories completed
+		is less than 13 (18 given originally) the mark is evenly
+		split between the members. If this is not accurate, please
+		update the marks_feedback.txt below.
+
+	marks_feedback.txt : 
+		If your group feels that the allocation of work
+		to members is not accurate, or there is an issue
+		with the marking, please fill this out,
+		add, commit and push before Dec 18 at midnight.
+	
+		The total for the group contribution must be 100%.
+	
+ 	members.txt: the members of this group
+ 	architecture_mark/mark.txt : details behind the architecture mark
+ 	git_mark/mark.txt : details behind the git marks
+ 	gui_mark/mark.txt : details behind the gui marks
+ 	scrum_mark/mark.txt : details behind the scrum marks
+
+----------------------------------------------------------------------------
+Notes for the mark.txt files 
+----------------------------------------------------------------------------
+
+CodeFunctionality 
+    Misc
+    F01 [YN] i=n No longer appears on screen
+    F02 [YN] z-order respects order objects are created in
+    F03 [YN] After window resize, drag in window displays properly.
+         Bug in original code: Canvas should be tracking mouse events
+         not PaintPanel
+    F04 [YN] Drag responds quickly. Mouse momentarily gets away
+         from shape boundary possibly indicates an issue. 
+         Possibly repeatedly adding shapes to the model 
+         instead of modifying one shape/command in the model.
+
+    Circle
+    F05 [YN] Feedback while dragging circle
+    F06 [YN] Drag circle tracks mouse (mouse stays on boundary)
+
+    Rectangle
+    F07 [YN] Can build rectangle
+    F08 [YN] Drag rectangle tracks mouse (stays on perimeter, when dragging up, left)
+
+    Square
+    F09 [YN] Can build square
+    F10 [YN] Drag square tracks mouse (stays on perimeter, when dragging up, left)
+
+    Squiggle
+    F11 [YN] Can build squiggle
+    F12 [YN] Squiggles are separate
+
+    Color selector
+    F13 [YN] Color chooser
+    F14 [YN] OK Color chooser
+    F15 [YN] Great color chooser
+
+    Fill style selector
+    F16 [YN] Fill style (filled/outlined) present and works
+    F17 [YN] Fill selector clearly indicates current state
+
+    Line thickness selector
+    F18 [YN] Line thickness
+    F19 [YN] Great line thickness UI (ie slider, not just a textbox)
+
+    Drawing Mode
+    F20 [YN] Icons for shape mode
+    F21 [YN] No text for shape mode
+    F22 [YN] Clear indication of which shape mode is selected
+
+    Polyline
+    F23 [YN] Polyline implemented
+
+CodeFunctionality /23
+
+Code Simplicity 
+    S01 [YN] Each squiggle contains all of its points. For example in an ArrayList.
+    S02 [YN] No "if", "switch" in PaintPanel
+    S03 [YN] No String modes or similar in PaintPanel
+    S04 [YN] Naming should be clear, class names should 
+         have Model/Command/Strategy/Factory etc. in their names.
+
+    S05 [YN] Instance variables should be private.
+    S06 [YN] Only ArrayList in PaintModel, Squiggle, PolyLine, possibly for redo stack
+    S07 [YN] GraphicsContext and mouseEvent should not be in same class
+    S08 [YN] No use of static, only in exceptional cases, more likely, use indicates an issue.
+    S09 [YN] No use of instanceof, with the possible exception of architectures with pen commands in the PaintModel and for undo/redo
+    S10 [YN] mouse dragged, should cause redraw of complete PaintModel
+    S11 [YN] Rectangle handling topLeft and bottomRight is simple. No "if" here.
+    S12 [YN] No repeated 
+         if (e.getEventType() == MouseEvent.MOUSE_PRESSED) {
+
+         } else if (e.getEventType() == MouseEvent.MOUSE_DRAGGED) {
+
+         } else if (e.getEventType() == MouseEvent.MOUSE_RELEASED) {
+
+         }
+Code Simplicity /12
+
+Architecture 
+
+    Strategy
+    A01 [YN] No if(mode == ...) checks, for example for mouse events.
+    A02 [YN] Mouse events should only be handled in one place, 
+         code should be at most direct deligation through to strategy.
+         Problem if mouse events are partially handled in PaintPanel
+         and partly handled in Strategy. Example of this is when 
+    A03 [YN] new Circle() should be in strategy, nowhere else, not in Command, not in Circle.
+    A04 [YN] RectangleStrategy drag is simple, not much more than a single call to a rectangle setter or similar.
+    A05 [YN] RectangleStrategy only handles press and drag. No other events are necessary.
+
+    Command
+    A06 [YN] Number of elements in PaintModel array does not increase during drag.
+        N Number of elements in PaintModel array does not increase during drag
+        N Command adds the same shape or new instances of the shape to the model while dragging.
+
+    A07 [YN] Each Command draws a single shape instance.
+        N Each Command draws a single shape instance
+        N Command create extra instances of the same shape while dragging. Only one instance per shape
+
+    A08 [YN] PaintPanel.repaint() asks model to draw, or go through 
+        N paint model not handling executing the commands
+
+    Factory
+    A09 [YN] Factory creates Strategies
+    A10 [YN] Factory called by ShapeChooserPanel
+
+    Relationship Between Classes
+    A11 [YN] GraphicsContext: Only appears in Commands/Shape, not in Strategy, not in MouseEvents
+    A12 [YN] Strategy is separate from Command/Shape.
+         Command/Shape do not handle mouse events.
+
+Architecture /12
+
+Documentation 
+    D01 [YN] Class Documentation on each interesting class
+    D02 [YN] Method Documentation on each interesting method
+    D03	[YN] Description of how classes are used in Design Patterns
+    D04	[YN] Self documenting method names
+Documentation /4
+
+ScrumGroup 
+    SC01 [YN] Priorities
+    SC02 [YN] Estimates
+    SC03 [YN] Owners for user stories clearly identified
+    SC04 [YN] Stories moved to completed heading
+    SC05 [YN] Stories copied to sprint backlog
+ScrumGroup /5
+
+Git 
+    G01 [YN] Branches on user stories
+        N No branches
+        N branches without ticket id in their name
+    G02 [YN] No/little code commits on master
+    G03 [YN] Merges back to master
+        N branches merging into each other
+        N branches not being merged
+    G04 [YN] Git history looks straightforward
+        N branches branching off each other
+Git /4
+
+Additional Features /33
+
+CodeQuality = sum(ScrumGroup, Git, Architecture, CodeFunctionality, Code Simplicity)/60
+GroupTotal = (CodeQuality * 90 + AdditionalFeatures * 10)/100
+

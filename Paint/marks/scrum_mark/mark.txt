@@ -1,0 +1,7 @@
+ScrumGroup 
+    SC01 [N] Priorities
+    SC02 [N] Estimates
+    SC03 [Y] Owners for user stories clearly identified
+    SC04 [Y] Stories moved to completed heading
+    SC05 [Y] Stories copied to sprint backlog
+ScrumGroup 3/5

@@ -1,0 +1,125 @@
+# Sprint 2 Nov 3, 2018
+# Sprint 2 Backlog UserStories go below
+--------------------------------------------------------------------------
+TYPE : USER STORY 8 : herber30
+NAME : Implement Poly Line
+OWNER : subset
+PRIORITY : High
+ESTIMATE : 5 hours
+ISSUE : Polylines are a series of straight lines connected by points. Each
+click adds a new segment to the polyline.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : User Story 9 : sandh211
+NAME : Draw a Square
+OWNER : subset
+PRIORITY : medium
+ESTIMATE : 2 hours
+AS A : user
+I WANT : To click on one corner of a square, drag, and release to
+specify two corners of a square to be drawn in the current style.
+SO THAT : I can add squares to my canvas
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : USER STORY 10 : sandh211
+NAME : Draw Square Feedback
+OWNER : subset
+PRIORITY : medium
+ESTIMATE : 1 hour
+AS A : user
+I WANT : Similarly to Draw Rectangle Feedback, display the Square in mid construction.
+SO THAT : I can see the square I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : BUG 3 : sandh211
+NAME : Architecture behind choosing selection mode is poor
+OWNER : subset
+PRIORITY : High
+ESTIMATE : 7 hours
+ISSUE : Code is not modular and is difficult to expand. Need a better
+architecture behind selecting a drawing mode, and handling
+the drawing events. Consider some design patterns here.
+Refactor ShapeChooserPanel and PaintPanel to get rid of the
+'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : BUG 4 : durran33
+NAME : Architecture behind Model is poor
+OWNER :
+PRIORITY : high (a lot of other bugs depend on this one being fixed first)
+ESTIMATE : 4 hours
+ISSUE : Having a list of different types of drawable things in the
+model is cumbersome. In fact, it is currently incorrect, with
+Squiggle's not drawing properly. Need to re-architect the Model
+so that it is more flexible, and easier to work with.
+Consider some design patterns, or change of responsibility
+here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : BUG 5 : herber30
+NAME : Squiggle is broken
+OWNER :
+PRIORITY :
+ESTIMATE :
+ISSUE : Squiggles are connected to each other by a straight line. Each drag
+of the mouse should be a separate squiggle. Possibly
+the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : BUG 9 : sandh211
+NAME : Architecture behind choosing drawing mode is poor
+OWNER : subset
+PRIORITY : high
+ESTIMATE : 7 hours
+ISSUE : A better architecture behind selecting a drawing mode can be created
+by implementing the Factory Design Pattern as follows:
+
+The factory design pattern should be used by the paint buttons.
+The factory is responsible for creating different ShapeManipulatorStrategy
+instances (see BUG 2.4). That is, when a button is pressed, the appropriate
+ShapeManipulatorStrategy is created and installed in the PaintPanel.
+Note that you can associate text with a button, even if you
+display an ImageIcon. The string attached to the button causes the right choice
+of object creation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : BUG 10 : herber30
+NAME : Architecture behind creating shape instances is poor
+OWNER :
+PRIORITY :
+ESTIMATE :
+ISSUE : A better architecture for creating shape instances so that it is
+more flexible, and easier to work with can be created using the Strategy Design
+pattern as follows:
+
+Create class/abstract class/interface ShapeManipulatorStrategy as well
+as subclasses/implementators for each type of Shape. Call these the
+concrete ShapeManipulatorStrategies
+
+The concrete ShapeManipulatorStrategies are responsible for
+
+1. Creating instances of Shape and putting them on top of
+the PaintModel command stack.
+
+2. Understanding how mouse events modify the shape at the top of the
+PaintModel command stack.
+
+3. Calling the PaintPanel repaint at appropriate times.
+
+This strategy can be put in place either by having PaintPanel's mouse
+events forwarded through PaintPanel into the current strategy, or by
+simply switching the PaintPanel's event handlers as appropriate.
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE : BUG 11 : herber30
+NAME : Polyline is broken
+OWNER :
+PRIORITY :
+ESTIMATE :
+ISSUE : Polylines are connected to each other by a straight line. Each double
+click of the mouse should be end a polyline.
+--------------------------------------------------------------------------
+
+

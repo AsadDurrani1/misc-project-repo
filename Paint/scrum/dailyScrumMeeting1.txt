@@ -1,0 +1,134 @@
+# Fill in, commit and push each day.
+# Group Member: Harmehtab Sandhu
+Oct 28, 2018
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Oct 29, 2018
+	Yesterday :
+	Today     : Received assignment and provided contact information for teammates. 
+	Obstacles : None.
+
+Oct 30, 2018
+	Yesterday :
+	Today     :Completed User Story 3.
+	Obstacles :Bug in making a rectangle making it that rectangle is only created in 1 direction, from the origin point to the bottom right.
+
+Oct 31, 2018
+	Yesterday : Thought to have completed User Story 3.
+	Today     : Continued to work on User Story 3 in order to fix the bug preventing the rectangle to be drawn in all directions and is now 
+				completed. Completed User Story 4 in order to accurately provide feedback to user in the process of creating a rectangle. 
+				Completed Bug 2 making it so that the shape choosing buttons get toggled and highlighted while in use. Started work on Bug 1.
+	Obstacles : Obstacle currently facing for Bug 2 which requires the images used for the icon to be within the file itself, in order for them
+				to be visible regardless of user location, and replacing the text on the button with suitable image, i.e. rectangle image for 
+				"Rectangle", circle image for "Circle", etc. 
+	
+Nov 1, 2018
+	Yesterday :Completed User Story 3 and 4 and Bug 6.
+	Today     :Continued to make progress on Bug 1. Successfully got the shape chooser panel button to have images.
+	Obstacles :Running into problems having the image source be within the file, so that it can be used on all devices. Problem
+				sourcing the images from within the package.
+
+Nov 2, 2018
+	Yesterday :Completed User Story 3, 4 and Bug 6.
+	Today     :Completed Bug 1, successfully showing images of of the shapes on the buttons. Began planning out the implementation of 
+				Square and User Story 6.
+	Obstacles :Getting the new buttons to work consistently, fixing bugs which would not find the sourced image when the program 
+				was being initiated, as it would go into a infinite loop and not start the program. 
+
+Nov 3, 2018
+	Yesterday :Completed Bug 1.
+	Today     :Fixed up a issue which persisted through the implementation of Bug1 where the Squiggle picture would not show. Also
+				changed the layout of the shape choosing buttons so now they display both text and image, they are just a little 
+				bigger in size. Also, began the implementation of drawing a square.
+	Obstacles :Despite thinking that the images on the buttons would be visible for everyone, the image for squiggle would not 
+				show up even though the code for it was the same as the code for the rest of the shapes. However, this was the only
+				one with the problem.
+
+Nov 4, 2018
+	Yesterday :Fixed the bugs around displaying the images in the bug and began the implementation of square.
+	Today     :Continued to work on the implementation of square.
+	Obstacles :Although at first it seemed like the implementation of a square would be quite similar to the 
+				implementation of a rectangle. It turned out to actually be more complex than the implementation
+				of a rectangle. Precisely due to the fact that the side length of the square depended on which 
+				direction you dragged the mouse further into unlike rectangle which had a unique length for height
+				and width.
+
+Nov 5, 2018
+	Yesterday :Continued to working on User Story 9, which was implementing the Square shape and its drawing.
+	Today     :Today, first early on finished User Story 9 (drawing a square). And also began and completed the 
+				implementation of the square feedback (User Story 10), allowing the user to see the square they will
+				draw before actually drawing it. 
+	Obstacles :Coming up with a way to draw a square without having a long, repetitve function with multiple 
+				nested loops, instead having a function that completes the same task, except in 1/3 the code.
+
+Nov 6, 2018
+	Yesterday :Completed Square and Square feedback.
+	Today     :Began planning out Bug 3 and brainstorming possible design patterns or combination of design 
+				patterns which can be used to improve the architecture of the selection mode.
+	Obstacles :Currently the biggest obstacle regarding this bug is primarily difficulty deciding which user
+				pattern is best suitable for this situation, as it feels like there's more than one which can
+				get the job done, its just a matter of which is most effective to implement. Moreover, it 
+				seems as if Bug 3 and Bug 9 can both be solved together, using an effective design pattern,
+				however, currently not sure if possible.  
+
+Nov 7, 2018
+	Yesterday :Began on Bug 3.
+	Today     :Today, while figuring out how to implement bug 3, came to the realization that bug 9 is very
+				closely related to bug 9 and implementing bug 9 would actually do much of what is expected on
+				bug 3, so diverted attention to bug 9 and began figuring out how it works.
+	Obstacles :Challenge figuring out how factory design pattern and strategy design pattern can work together
+				from bug 9 and bug 10 
+
+Nov 8, 2018
+	Yesterday :Began planning the implementation of Bug 3 and found it led to thinking about Bug 9.
+	Today     :Diverted attention completely to Bug 9 and made progress on it, hopefully reaching a final
+				state for it, without needing future changes for the bug.
+	Obstacles :Planned the implementation of Bug 10 with teammate in order to see how it can work with Bug 9,
+				trying to figure out how it works with Bug 9 in order to create the shape from within the 
+				strategy design pattern implementation. 
+
+Nov 9, 2018
+	Yesterday : Completed Bug 9.
+	Today     :Continued working on Bug 10 with team member reaching an almost complete state.
+	Obstacles :Running into some difficulties regarding the technicalities of the Factory/Strategy combination design pattern.
+
+Nov 10, 2018
+	Yesterday :Worked on Bug 10 with partner.
+	Today     :Reviewed Bug 9 and Bug 3 to ensure all requirements for the Bugs were fulfilled, and made sure everything implemented
+				for those Bugs worked fine with the addition of the completion of Bug 10. Also, looked for new Bugs which have arised
+				since the implementation of the design patterns. Found that the the i count has stopped functioning. Also, thought about
+				possible new features which could be added to improve functionality. 
+	Obstacles :Looking for why the i counter stopped incrementing.
+	
+Nov 11, 2018
+	Yesterday :Reviewed to find the potential bugs in the overall product after the addition of bugs and design patterns.
+	Today     :Continued to work on new features to improve functionality such as implementation of functions such as "New" and "Undo" as well
+				as tried to find potential ways to increment the i shape counter correctly. 
+	Obstacles :Found a way to increment i correctly for the most part, however, running into problems where once polyline is selected and drawn
+				even once, it messes up the increments of the i shape counter for all additional shapes drawn after the fact.
+	
+Nov 12, 2018
+	Yesterday :Worked on the i counter and began implementation of "New" and "Undo"
+	Today     :Continued to try and figure out why the i incrementer is not working properly, as well as completed the implementation of "New",
+				"Undo", "Redo", as well as "Exit".
+	Obstacles :Struggling to fix the bug in the incrementer, it all works perfectly fine, until Polyline is called and made, after the creation of
+				the first polyline however, the incrementation of the i counter begins to mess up.
+
+Nov 13, 2018
+	Yesterday :Worked on the i incrementer to see why it was not working properly, as well as completed the implementation of some MenuBar features.
+	Today     :Worked with teammate (herber30) to overcome big mistake in the implementation of Bugs 9 and 10 which was impeding our ability to implement
+				the i counter, due to the previously wrong implementation of the design patterns.
+	Obstacles :Stopping previous strategies from running once the strategy was changed.
+
+Nov 14, 2018
+	Yesterday :Fixed implementation of Bug 9 and 10, and implemented i counter, and implemented some menu bar
+				features
+	Today     :Worked on trying to implement more menubar features such as cut, copy, and paste.
+	Obstacles :Accessing specific shapes to cut, copy, or paste.
+	
+Nov 15, 2018
+	Yesterday :Worked on trying to implement more features from the menubar such as cut, copy, and paste.
+	Today     :Worked on the presentation of the final version of the code by fixing and adding javadocs and removing all unnecessary code.
+	Obstacles :Accessing specific shapes to cut, copy, or paste.
