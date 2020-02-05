@@ -115,4 +115,3 @@ class GameBoard:
             self.game_over = True
             return True
         return False
-

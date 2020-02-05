@@ -9,8 +9,10 @@ def find_next_move(b: GameBoard):
     
     2. Check if there is a win available in one move. This move is worth 10 points and is returned.
     
-    3. otherwise loop through the board, find all available moves, make these moves, and recursively call find_next_move() on all of these states.
-    The opponent's best move is considered as the current player's worst move and is avoided at all costs, given -10 points.
+    3. otherwise loop through the board, find all available moves, make these moves, and recursively call
+    find_next_move() on all of these states.
+    The opponent's best move is considered as the current player's worst move and is avoided at all costs, 
+    given -10 points.
     
     4. return the move with the highest points
     

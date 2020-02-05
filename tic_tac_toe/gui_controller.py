@@ -153,3 +153,4 @@ class GameBoardView:
             
     
 g = GameBoardView()
+g.root.mainloop()

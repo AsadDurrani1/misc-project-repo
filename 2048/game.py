@@ -129,7 +129,7 @@ def game(g: Grid) -> None:
             raise IllegalMoveError
         current = g.grid[:]
         g.move(moves[move])
-        os.system('cls')
+        os.system('clear')
         if current == g.grid and not None in g.grid:
             print('( ͡° ͜ʖ ͡°)')
             print('Game over. Your score was: ' + str(g.score) + '.')
@@ -143,17 +143,17 @@ def game(g: Grid) -> None:
         print('( ͠° ͟ʖ ͡°)')
         print('That move is not allowed.')
         cont = input('Enter any key to continue.')
-        os.system('cls')
+        os.system('clear')
         game(g)
     except KeyError:
         print('( ͠° ͟ʖ ͡°)')
         print('That move is not allowed.')
         cont = input('Enter any key to continue.')
-        os.system('cls')
+        os.system('clear')
         game(g)
 
         
-os.system('cls')
+os.system('clear')
 g = Grid()
 print('Welcome to 2048!')
 print('\n')
