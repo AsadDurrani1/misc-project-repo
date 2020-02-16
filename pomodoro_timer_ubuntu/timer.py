@@ -36,7 +36,7 @@ class Timer:
 	def set_time(self, minutes, seconds):
 		self.minutes = minutes
 		self.seconds = seconds
-        
+ 
 if __name__ == "__main__":
 	T = Timer(25)
 	T.begin_timer()

@@ -3,7 +3,7 @@ import io
 import fileinput
 import random
 
-def spongebobify(s: str) -> str:
+def spongebobify(s):
     ret = ""
     for char in s:
         ret += char.lower() if random.randint(0,1) == 0 else char.upper()
