@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{footnotebackref}
+\usepackage{tikz}
+\newcommand{\thm}[3]{\begin{tcolorbox}[title=\textbf{Theorem #1: #2},
+coltitle=black,colback=blue!20, colframe=blue!50]#3\end{tcolorbox}}
+\newcommand{\df}[3]{\begin{tcolorbox}[title=\textbf{Definition #1: #2},
+coltitle=black,colback=red!20, colframe=red!40]#3\end{tcolorbox}}
+\newcommand{\ex}[2]{\begin{tcolorbox}[title=\textbf{Example #1},
+coltitle=black,colback=green!20, colframe=green!50]#2\end{tcolorbox}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\pf}{\textit{Proof. }}
+\newcommand{\lm}{\textit{Lemma. }}
+\newcommand{\nn}{\\[0.5em]}
+\newcommand{\nl}{\\[1.0em]}
+\newcommand{\ep}{\hfill $\blacksquare$\nl}
+\newcommand{\ec}{\hfill $\square$\nn}
+\newcommand{\quot}[2]{\textit{``#1"} $\sim$ \textbf{#2}\nl}
+\newcommand{\start}[1]{
+\LARGE \centering #1 \nl
+\normalsize \raggedright
+}
+\begin{document}
+\setlength\parskip{0.5em minus 0.2em}
+\[z = wx + b\]
+\[y = \dfrac{1}{1 + e^{-z}}\]
+\[\mathcal{L}(y,t) = -t\log(y) + (t-1)\log(1-y)\]
+\[\dfrac{\partial \mathcal{L}}{\partial y}
+= \dfrac{-t}{y} + \dfrac{t-1}{1-y}\]
+\[\dfrac{dy}{dz} = \dfrac{e^{-z}}{(1 + e^{-z})^2}\]
+\[\dfrac{\partial z}{\partial w}
+= x\]
+\[\Rightarrow 
+\dfrac{\partial \mathcal{L}}{\partial w}
+= \left(\dfrac{-t}{y}
++ \dfrac{t-1}{1-y}\right)
+\left(\dfrac{e^{-z}}{(1+e^{-z})^2}\right)x\]
+\[\Rightarrow 
+\dfrac{\partial \mathcal{L}}{\partial b}
+= \left(\dfrac{-t}{y}
++ \dfrac{t-1}{1-y}\right)
+\left(\dfrac{e^{-z}}{(1+e^{-z})^2}\right)
+\]
+
+\end{document}
