@@ -11,4 +11,4 @@ tic-tac-toe - A python GUI implementation of the game tic-tac-toe using the mini
 
 pomodoro-timer - A python GUI application that I'll sometimes use for studying. Sets a timer for 25 minutes, plays a sound to let you know it's time to take a break for 5 minutes, and repeats.
 
-Connect 4 and 2048 - Text based implementations of connect 4 and 2048, made before I had a good understanding of GUI's. :)
+Connect 4 and 2048 - Text based implementations of connect 4 and 2048. The latter of these was done before I had a good understanding of GUI's, the former of these was just me brushing up on python :)
